@@ -1,0 +1,9 @@
+.child-cnt{
+    width: 250px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15px;
+    border: 1px solid black;
+    margin: 30px 20px;
+}

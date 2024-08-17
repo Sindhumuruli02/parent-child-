@@ -1,0 +1,10 @@
+<h1>parent Component!</h1>
+<!-- <app-child [dataFromParent]="parentData"></app-child>-->
+ <input style="height: 50px; width: 100%; padding:0.5rem;" type="text" [(ngModel)] = "searchQuery"/>
+<button (click)="updateDataInDataService()">Update Data</button>
+
+<div *ngFor="let note of notesList | searchPipe:searchQuery ">
+    <app-child [noteDetails]="note" 
+    (sendDataToParent)="handleUpdateNotesList($event)"
+    ></app-child>
+</div>
